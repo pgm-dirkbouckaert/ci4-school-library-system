@@ -1,0 +1,13 @@
+# Disable index view
+options -Indexes
+
+# Block access to all dot files
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Allow access to php files 
+<Files ~ "\.(php)$">
+  Allow from all
+</Files>
